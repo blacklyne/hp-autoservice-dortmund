@@ -1,0 +1,29 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+  align?: "left" | "center";
+}
+const { eyebrow, title, text, align = "left" } = Astro.props;
+---
+
+<div class={`sec-head ${align === "center" ? "is-center" : ""}`}>
+  {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+  <h2 class="h-section">{title}</h2>
+  {text && <p class="lead">{text}</p>}
+</div>
+
+<style>
+  .sec-head {
+    margin-bottom: 3rem;
+    max-width: 56rem;
+  }
+  .sec-head.is-center {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .sec-head.is-center .lead {
+    margin-inline: auto;
+  }
+</style>

@@ -1,0 +1,226 @@
+---
+import Base from "~/layouts/Base.astro";
+import { site } from "~/data/site";
+import { breadcrumbSchema } from "~/lib/seo";
+
+const description = "Datenschutzerklärung von H.P. Autoservice in Dortmund-Derne nach Art. 13 DSGVO. Transparente Information zur Verarbeitung Ihrer Daten.";
+const breadcrumbs = breadcrumbSchema([
+  { name: "Start", url: "/" },
+  { name: "Datenschutz", url: "/datenschutz/" },
+]);
+---
+
+<Base title="Datenschutz" description={description} noindex jsonLd={breadcrumbs}>
+  <section class="legal-hero">
+    <div class="container-x">
+      <span class="eyebrow">Information nach Art. 13 DSGVO</span>
+      <h1>Datenschutzerklärung</h1>
+      <p class="legal-sub">
+        Wir nehmen den Schutz Ihrer persönlichen Daten ernst. Hier erfahren Sie, welche Daten wir warum erheben -
+        und welche Rechte Sie haben.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight legal">
+    <div class="container-x">
+      <div class="legal-prose">
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          Verantwortlich für die Datenverarbeitung auf dieser Webseite im Sinne der DSGVO ist:
+        </p>
+        <p>
+          <strong>H.P. Autoservice</strong><br />
+          <em>[Inhaber: Vorname Nachname]</em><br />
+          {site.address.street}<br />
+          {site.address.zip} {site.address.city}<br />
+          Telefon: <a href={site.phone.href}>{site.phone.display}</a><br />
+          E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+
+        <h2>2. Allgemeine Hinweise zur Datenverarbeitung</h2>
+        <h3>Umfang der Verarbeitung personenbezogener Daten</h3>
+        <p>
+          Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer
+          funktionsfähigen Webseite sowie unserer Inhalte und Leistungen erforderlich ist. Eine Verarbeitung erfolgt
+          regelmäßig nur nach Einwilligung des Nutzers oder wenn die Verarbeitung durch gesetzliche Vorschriften gestattet ist.
+        </p>
+
+        <h3>Rechtsgrundlagen</h3>
+        <p>
+          Soweit wir für die Verarbeitung Ihrer Daten eine Einwilligung einholen, dient Art. 6 Abs. 1 lit. a DSGVO als Rechtsgrundlage.
+          Bei der Verarbeitung zur Erfüllung eines Vertrags ist Art. 6 Abs. 1 lit. b DSGVO Rechtsgrundlage. Für die Wahrung unserer
+          berechtigten Interessen dient Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage.
+        </p>
+
+        <h2>3. Bereitstellung der Webseite und Erstellung von Logfiles</h2>
+        <p>
+          Bei jedem Aufruf unserer Webseite erfasst unser System automatisiert Daten und Informationen vom Computersystem
+          des aufrufenden Rechners. Folgende Daten werden hierbei vorübergehend gespeichert:
+        </p>
+        <ul>
+          <li>IP-Adresse des Nutzers (anonymisiert)</li>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>Aufgerufene Seite / Datei</li>
+          <li>Übertragene Datenmenge</li>
+          <li>Browser, Betriebssystem und dessen Version</li>
+          <li>Referrer-URL (zuvor besuchte Seite)</li>
+        </ul>
+        <p>
+          Diese Daten werden in den Logfiles unseres Systems gespeichert. Eine Speicherung dieser Daten zusammen mit
+          anderen personenbezogenen Daten des Nutzers findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+          Die Daten werden nach 7 Tagen automatisch gelöscht.
+        </p>
+
+        <h2>4. Cookies</h2>
+        <p>
+          Unsere Webseite verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Webseite
+          erforderlich sind. Es findet kein Tracking, keine Webanalyse und kein Profiling statt. Wir setzen keine
+          Cookies von Drittanbietern wie Google Analytics oder Werbenetzwerken ein.
+        </p>
+
+        <h2>5. Kontaktformular und Kontaktaufnahme</h2>
+        <p>
+          Auf unserer Webseite ist ein Kontaktformular vorhanden, welches für die elektronische Kontaktaufnahme genutzt
+          werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, werden die in der Eingabemaske eingegeben Daten an uns
+          übermittelt und gespeichert. Diese Daten sind:
+        </p>
+        <ul>
+          <li>Name</li>
+          <li>Telefonnummer</li>
+          <li>E-Mail-Adresse (optional)</li>
+          <li>Fahrzeugdaten (Marke, Modell, Baujahr - optional)</li>
+          <li>Inhalt der Anfrage</li>
+        </ul>
+        <p>
+          Im Zeitpunkt der Absendung der Nachricht werden zudem Datum und Uhrzeit gespeichert. Die Verarbeitung der
+          personenbezogenen Daten dient uns allein zur Bearbeitung der Kontaktaufnahme. Rechtsgrundlage ist Art. 6 Abs. 1
+          lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Bearbeitung).
+        </p>
+        <p>
+          Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind.
+          Gesetzliche Aufbewahrungspflichten (insbesondere aus AO und HGB) bleiben unberührt.
+        </p>
+
+        <h3>Formspree (Formular-Versand)</h3>
+        <p>
+          Das Kontaktformular nutzt den Dienst Formspree (Formspree, Inc., USA), um die Übermittlung an unser E-Mail-Postfach
+          technisch abzuwickeln. Beim Absenden werden die eingegebenen Daten an Formspree übertragen und an uns weitergeleitet.
+          Formspree verarbeitet die Daten in unserem Auftrag (Auftragsverarbeitungsvertrag). Weitere Informationen finden Sie
+          in der Datenschutzerklärung von Formspree:
+          <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">formspree.io/legal/privacy-policy</a>.
+        </p>
+
+        <h2>6. Google Maps</h2>
+        <p>
+          Unsere Webseite nutzt über einen iFrame-Embed den Kartendienst Google Maps der Google Ireland Limited (Gordon House,
+          4 Barrow St, Dublin, D04 E5W5, Irland). Beim Laden der Karten-Iframes werden Daten (insbesondere IP-Adresse) an
+          Google übertragen. Auf den Seiten "Kontakt" und "Start" wird die Karte erst durch Anzeige des entsprechenden
+          Bereichs geladen.
+        </p>
+        <p>
+          Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer
+          ansprechenden Darstellung unseres Standorts). Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der
+          Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.
+        </p>
+
+        <h2>7. Google Fonts</h2>
+        <p>
+          Diese Webseite bindet Schriftarten von Google Fonts ein. Beim Aufruf einer Seite lädt Ihr Browser die benötigten
+          Schriftarten in den Browsercache, um Texte und Schriftarten korrekt anzuzeigen. Hierbei wird eine Verbindung zu den
+          Servern von Google aufgebaut. Hierdurch erlangt Google Kenntnis darüber, dass über Ihre IP-Adresse unsere Webseite
+          aufgerufen wurde.
+        </p>
+        <p>
+          Die Nutzung von Google Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Webseite.
+          Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.
+        </p>
+
+        <h2>8. WhatsApp-Kontaktmöglichkeit</h2>
+        <p>
+          Auf unserer Webseite finden Sie einen Link, über den Sie uns über den Messenger-Dienst WhatsApp (WhatsApp Ireland Limited,
+          4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland) kontaktieren können. Erst durch Klick auf diesen Link
+          werden Daten an WhatsApp übermittelt. Beachten Sie die <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von WhatsApp</a>.
+        </p>
+
+        <h2>9. Rechte der betroffenen Person</h2>
+        <p>
+          Werden personenbezogene Daten von Ihnen verarbeitet, sind Sie Betroffener i.S.d. DSGVO und es stehen Ihnen folgende Rechte zu:
+        </p>
+        <ul>
+          <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO) - Sie können jederzeit erfahren, welche Daten wir über Sie speichern.</li>
+          <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO) - Falsche Daten korrigieren wir auf Ihre Aufforderung umgehend.</li>
+          <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO) - Soweit keine gesetzliche Aufbewahrungspflicht entgegensteht.</li>
+          <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO)</li>
+          <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+          <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO) - Gegen Verarbeitungen aufgrund berechtigter Interessen.</li>
+          <li><strong>Recht auf Widerruf einer Einwilligung</strong> (Art. 7 Abs. 3 DSGVO) - Mit Wirkung für die Zukunft.</li>
+          <li>
+            <strong>Beschwerderecht bei einer Aufsichtsbehörde</strong> (Art. 77 DSGVO) - Zuständig in NRW ist die
+            Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen,
+            <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a>.
+          </li>
+        </ul>
+        <p>
+          Zur Ausübung Ihrer Rechte wenden Sie sich an die im Impressum angegebene Adresse oder an
+          <a href={`mailto:${site.email}`}>{site.email}</a>.
+        </p>
+
+        <h2>10. SSL-Verschlüsselung</h2>
+        <p>
+          Diese Webseite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung.
+          Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt.
+        </p>
+
+        <h2>11. Änderung dieser Datenschutzerklärung</h2>
+        <p>
+          Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht
+          oder um Änderungen unserer Leistungen umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+        </p>
+
+        <p class="legal-meta">
+          <em>Stand: Mai 2026 - Hinweis: Eckige Klammern markieren Felder, die noch durch den Inhaber ergänzt werden.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .legal-hero {
+    background: linear-gradient(135deg, var(--color-navy), var(--color-navy-deep));
+    color: #fff;
+    padding-block: 4rem 3rem;
+  }
+  .legal-hero h1 {
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-top: 0.5rem;
+  }
+  .legal-hero .eyebrow {
+    color: var(--color-gold-soft);
+  }
+  .legal-sub {
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 1rem;
+    max-width: 50rem;
+  }
+
+  .legal {
+    background: var(--color-paper);
+  }
+  .legal-prose {
+    max-width: 56rem;
+  }
+  .legal-prose em {
+    color: var(--color-gold);
+    font-style: italic;
+  }
+  .legal-meta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-line);
+    color: var(--color-ink-soft);
+    font-size: 0.9rem;
+  }
+</style>

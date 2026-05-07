@@ -1,0 +1,373 @@
+---
+import Base from "~/layouts/Base.astro";
+import Icon from "~/components/Icon.astro";
+import PageHero from "~/components/PageHero.astro";
+import { site } from "~/data/site";
+import { breadcrumbSchema } from "~/lib/seo";
+
+const description =
+  "Kontakt zu H.P. Autoservice in Dortmund-Derne. Telefon 0231 810717, Adresse Nikolaus-Groß-Straße 21, Öffnungszeiten Mo-Fr 8-17 Uhr. Termin direkt anfragen.";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Start", url: "/" },
+  { name: "Kontakt", url: "/kontakt/" },
+]);
+
+const heroImg =
+  "https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?auto=format&fit=crop&w=2000&q=80";
+---
+
+<Base title="Kontakt" description={description} jsonLd={breadcrumbs}>
+  <PageHero
+    eyebrow="Termin & Kontakt"
+    title="Wir freuen uns auf Ihren Anruf."
+    text="Am schnellsten geht es per Telefon. Schriftlich gerne per Formular oder WhatsApp - wir melden uns zeitnah zurück."
+    image={heroImg}
+  />
+
+  <section class="section">
+    <div class="container-x">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h2 class="h-section">Direkter Draht zur Werkstatt.</h2>
+
+          <div class="contact-cards">
+            <a href={site.phone.href} class="contact-card highlight">
+              <span class="icon-circle icon-circle-accent">
+                <Icon name="phone" size={26} />
+              </span>
+              <div>
+                <div class="contact-label">Anrufen (am schnellsten)</div>
+                <div class="contact-value">{site.phone.display}</div>
+                <div class="contact-meta">Mo - Fr · 08:00 - 17:00 Uhr</div>
+              </div>
+            </a>
+
+            <a href={site.whatsapp.href} target="_blank" rel="noopener noreferrer" class="contact-card">
+              <span class="icon-circle">
+                <Icon name="whatsapp" size={24} />
+              </span>
+              <div>
+                <div class="contact-label">WhatsApp</div>
+                <div class="contact-value">{site.whatsapp.display}</div>
+                <div class="contact-meta">Foto vom Schaden? Einfach senden.</div>
+              </div>
+            </a>
+
+            <a href={`mailto:${site.email}`} class="contact-card">
+              <span class="icon-circle">
+                <Icon name="mail" size={24} />
+              </span>
+              <div>
+                <div class="contact-label">E-Mail</div>
+                <div class="contact-value">{site.email}</div>
+                <div class="contact-meta">Antwort spätestens am nächsten Werktag</div>
+              </div>
+            </a>
+
+            <div class="contact-card">
+              <span class="icon-circle">
+                <Icon name="map-pin" size={24} />
+              </span>
+              <div>
+                <div class="contact-label">Adresse</div>
+                <div class="contact-value">{site.address.street}</div>
+                <div class="contact-meta">{site.address.zip} {site.address.city}-{site.address.district}</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <span class="icon-circle">
+                <Icon name="clock" size={24} />
+              </span>
+              <div>
+                <div class="contact-label">Öffnungszeiten</div>
+                <div class="contact-value">Mo - Fr · 08:00 - 17:00</div>
+                <div class="contact-meta">Samstag & Sonntag geschlossen</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <div class="form-card">
+            <h2 class="h-section">Termin online anfragen.</h2>
+            <p class="lead">
+              Schreiben Sie kurz, worum es geht - wir melden uns am nächsten Werktag mit
+              einem passenden Termin zurück.
+            </p>
+
+            <form
+              class="contact-form"
+              action={`https://formspree.io/f/${site.formspreeId}`}
+              method="POST"
+            >
+              <div class="form-row">
+                <label class="field">
+                  <span>Name *</span>
+                  <input type="text" name="name" required autocomplete="name" />
+                </label>
+                <label class="field">
+                  <span>Telefon *</span>
+                  <input type="tel" name="phone" required autocomplete="tel" />
+                </label>
+              </div>
+
+              <label class="field">
+                <span>E-Mail</span>
+                <input type="email" name="email" autocomplete="email" />
+              </label>
+
+              <label class="field">
+                <span>Fahrzeug (Marke, Modell, Baujahr)</span>
+                <input type="text" name="fahrzeug" placeholder="z.B. VW Golf 7, 2018" />
+              </label>
+
+              <label class="field">
+                <span>Was können wir für Sie tun? *</span>
+                <textarea name="anliegen" rows="5" required placeholder="HU/AU? Bremsen? Klimaanlage? Beschreiben Sie kurz Ihr Anliegen."></textarea>
+              </label>
+
+              <label class="checkbox">
+                <input type="checkbox" name="datenschutz" required />
+                <span>
+                  Ich habe die <a href="/datenschutz/">Datenschutzerklärung</a> gelesen und bin
+                  mit der Verarbeitung meiner Daten einverstanden.
+                </span>
+              </label>
+
+              <button type="submit" class="btn btn-accent submit-btn">
+                Anfrage senden
+                <Icon name="arrow-right" size={16} />
+              </button>
+
+              <p class="form-note">
+                Lieber direkt anrufen?
+                <a href={site.phone.href}>{site.phone.display}</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section reveal">
+        <h2 class="h-section">So finden Sie uns.</h2>
+        <div class="map-frame">
+          <iframe
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(`${site.address.street}, ${site.address.zip} ${site.address.city}`)}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
+            title="Standort H.P. Autoservice Dortmund-Derne auf Google Maps"
+            width="100%"
+            height="500"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="map-hint">
+          <Icon name="map-pin" size={18} />
+          <span>Kostenlose Parkplätze direkt vor der Werkstatt.</span>
+          <a href={site.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="map-link">
+            Route in Google Maps planen
+            <Icon name="arrow-right" size={14} />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @media (min-width: 1000px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+  }
+
+  .contact-info .h-section {
+    margin-bottom: 2rem;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-card {
+    display: flex;
+    gap: 1.1rem;
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 0.85rem;
+    padding: 1.25rem 1.4rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    color: var(--color-ink);
+  }
+  a.contact-card:hover {
+    border-color: var(--color-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(27, 58, 95, 0.07);
+  }
+  .contact-card.highlight {
+    background: linear-gradient(135deg, rgba(200, 48, 44, 0.06), rgba(200, 48, 44, 0.02));
+    border-color: rgba(200, 48, 44, 0.25);
+  }
+  .contact-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.2rem;
+  }
+  .contact-value {
+    font-weight: 700;
+    color: var(--color-navy);
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+  .contact-meta {
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+    margin-top: 0.15rem;
+  }
+
+  .form-card {
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-card);
+  }
+  .form-card .lead {
+    margin-bottom: 1.75rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .field span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-navy);
+  }
+  .field input,
+  .field textarea {
+    width: 100%;
+    padding: 0.75rem 0.95rem;
+    border: 1.5px solid var(--color-line);
+    border-radius: 0.55rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    transition: border 0.15s ease;
+  }
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--color-navy);
+    background: #fff;
+  }
+  .field textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+
+  .checkbox {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-size: 0.88rem;
+    color: var(--color-ink-soft);
+    line-height: 1.5;
+    margin-top: 0.3rem;
+  }
+  .checkbox input {
+    margin-top: 0.25rem;
+    accent-color: var(--color-navy);
+  }
+  .checkbox a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .submit-btn {
+    margin-top: 0.75rem;
+    align-self: flex-start;
+  }
+
+  .form-note {
+    font-size: 0.88rem;
+    color: var(--color-ink-soft);
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  .form-note a {
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-left: 0.3rem;
+  }
+
+  .map-section {
+    margin-top: 5rem;
+  }
+  .map-section .h-section {
+    margin-bottom: 1.5rem;
+  }
+  .map-frame {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    box-shadow: var(--shadow-card);
+  }
+  .map-frame iframe {
+    display: block;
+  }
+  .map-hint {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 1.25rem;
+    color: var(--color-ink-soft);
+    font-size: 0.92rem;
+  }
+  .map-hint :global(svg) {
+    color: var(--color-accent);
+  }
+  .map-link {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--color-navy);
+    font-weight: 600;
+  }
+</style>

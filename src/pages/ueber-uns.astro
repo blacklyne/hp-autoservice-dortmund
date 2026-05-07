@@ -1,0 +1,359 @@
+---
+import Base from "~/layouts/Base.astro";
+import Icon from "~/components/Icon.astro";
+import PageHero from "~/components/PageHero.astro";
+import { site } from "~/data/site";
+import { breadcrumbSchema } from "~/lib/seo";
+
+const description =
+  "Über H.P. Autoservice in Dortmund-Derne: Familien-Meisterbetrieb mit zwei Kfz-Meistern, persönlicher Beratung und ehrlicher Arbeit. Lernen Sie unser Team kennen.";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Start", url: "/" },
+  { name: "Über uns", url: "/ueber-uns/" },
+]);
+
+const heroImg =
+  "https://images.unsplash.com/photo-1632823471565-1ec5e8a31bf1?auto=format&fit=crop&w=2000&q=80";
+const workshopImg =
+  "https://images.unsplash.com/photo-1581610186659-2cef6daca0e8?auto=format&fit=crop&w=1400&q=80";
+const detailImg =
+  "https://images.unsplash.com/photo-1599256871679-c97e6c8c6c1e?auto=format&fit=crop&w=1200&q=80";
+---
+
+<Base title="Über uns" description={description} jsonLd={breadcrumbs}>
+  <PageHero
+    eyebrow="Wer wir sind"
+    title="Ein Familien-Meisterbetrieb mitten in Derne."
+    text="Seit Jahren reparieren wir die Autos unserer Nachbarn - ehrlich, sauber, persönlich. Hier ein paar Worte zu uns."
+    image={heroImg}
+  />
+
+  <section class="section">
+    <div class="container-x">
+      <div class="story-grid">
+        <div class="story-text reveal">
+          <span class="eyebrow">Unsere Geschichte</span>
+          <h2 class="h-section">Werkstatt mit Handschlag-Qualität.</h2>
+          <p>
+            <em>[Platzhalter Gründungsgeschichte:</em> Hier erzählen wir, wann und wie der Betrieb gegründet wurde,
+            wer ihn aufgebaut hat und wie aus einer Idee ein eingespieltes Team wurde. Diese Stelle füllen wir
+            gemeinsam mit Ihnen mit Leben - schließlich gehört Ihre persönliche Geschichte ins Herzstück Ihrer
+            Werkstatt-Webseite. <em>]</em>
+          </p>
+          <p>
+            Was uns ausmacht: Wir sind ein echter Familienbetrieb. Zwei Kfz-Meister - die Initialen
+            "H.P." stehen für unseren Inhaber - und ein eingespieltes Team aus zwei weiteren Mitarbeitern.
+            Die Chefin sitzt im Büro und kennt jeden Kunden beim Namen.
+          </p>
+          <p>
+            Bei uns wird kein Auto durch eine anonyme Werkstattkette geschleust. Jedes Fahrzeug bekommt
+            persönliche Aufmerksamkeit, jede Reparatur eine ehrliche Erklärung. So verstehen wir
+            unseren Beruf seit Jahren.
+          </p>
+        </div>
+        <div class="story-image reveal">
+          <img src={workshopImg} alt="Werkstatt-Arbeitsplatz mit Werkzeugen" loading="lazy" width="800" height="900" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-values">
+    <div class="container-x">
+      <div class="values-head reveal">
+        <span class="eyebrow">Wofür wir stehen</span>
+        <h2 class="h-section">Drei Werte. Keine Kompromisse.</h2>
+      </div>
+      <div class="values-grid reveal">
+        <article class="value-card">
+          <span class="icon-circle icon-circle-accent">
+            <Icon name="award" size={28} />
+          </span>
+          <h3>Qualität</h3>
+          <p>
+            Meisterbetrieb ist mehr als ein Schild an der Wand. Wir arbeiten mit Markenteilen, modernen
+            Diagnosegeräten und der Sorgfalt, die uns die Meisterprüfung gelehrt hat. Pfusch hat hier keinen Platz.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="icon-circle icon-circle-accent">
+            <Icon name="handshake" size={28} />
+          </span>
+          <h3>Ehrlichkeit</h3>
+          <p>
+            Wir reparieren, was nötig ist - und sagen ehrlich, was warten kann. Keine erfundenen Mängel,
+            keine Pseudo-Inspektionen, keine Überraschungen auf der Rechnung. Wer einmal zu uns kommt, kommt wieder.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <span class="icon-circle icon-circle-accent">
+            <Icon name="users" size={28} />
+          </span>
+          <h3>Transparenz</h3>
+          <p>
+            Sie sehen, was gemacht wird. Wir erklären Reparaturen verständlich, zeigen ausgetauschte Teile auf
+            Wunsch vor und erstellen klare Kostenvoranschläge - bevor wir den Schraubenschlüssel ansetzen.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-team">
+    <div class="container-x">
+      <div class="team-grid">
+        <div class="team-image reveal">
+          <img src={detailImg} alt="Mechaniker bei der Arbeit am Motor" loading="lazy" width="800" height="900" />
+        </div>
+        <div class="team-text reveal">
+          <span class="eyebrow">Das Team</span>
+          <h2 class="h-section">Zwei Meister. Zwei Mitarbeiter.<br />Eine Werkstatt.</h2>
+          <p class="lead">
+            Bei uns arbeiten <strong>zwei Kfz-Meister</strong> und <strong>zwei festangestellte Mitarbeiter</strong>.
+            Klein genug, dass Sie immer den Meister persönlich sprechen. Groß genug, um Termine zeitnah zu vergeben.
+          </p>
+
+          <ul class="team-stats">
+            <li>
+              <div class="stat-num">2</div>
+              <div class="stat-label">Kfz-Meister</div>
+            </li>
+            <li>
+              <div class="stat-num">2</div>
+              <div class="stat-label">Mitarbeiter</div>
+            </li>
+            <li>
+              <div class="stat-num">{site.rating.value}<span>★</span></div>
+              <div class="stat-label">Google-Wertung</div>
+            </li>
+            <li>
+              <div class="stat-num">{site.rating.count}</div>
+              <div class="stat-label">Bewertungen</div>
+            </li>
+          </ul>
+
+          <p style="margin-top:1.5rem">
+            <em>[Platzhalter Team-Vorstellung:</em> Auf Wunsch ergänzen wir hier die Namen, Funktionen und kurze
+            Vorstellungen - ideal, wenn Sie Fotos vom Team in Berufsbekleidung haben. <em>]</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-area">
+    <div class="container-x">
+      <div class="area-card reveal">
+        <span class="eyebrow">Standort Dortmund-Derne</span>
+        <h2 class="h-section">Verwurzelt im Stadtbezirk Scharnhorst.</h2>
+        <p class="lead">
+          Derne liegt etwa acht Kilometer nordöstlich der Innenstadt - mit knapp 7.000 Einwohnern hat
+          der Stadtteil eine fast schon dörfliche Atmosphäre. Genau das mögen wir an unserem Standort:
+          Hier kennt man sich. Eine Werkstatt funktioniert hier nur mit echtem Vertrauen.
+        </p>
+        <div class="area-meta">
+          <div>
+            <strong>Adresse</strong>
+            <span>{site.address.street}<br />{site.address.zip} {site.address.city}-{site.address.district}</span>
+          </div>
+          <div>
+            <strong>Stadtbezirk</strong>
+            <span>Scharnhorst</span>
+          </div>
+          <div>
+            <strong>Region</strong>
+            <span>Nordrhein-Westfalen · Ruhrgebiet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (min-width: 1000px) {
+    .story-grid {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+    }
+  }
+  .story-text p {
+    color: var(--color-ink-soft);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    max-width: 60ch;
+  }
+  .story-text em {
+    color: var(--color-gold);
+    font-style: italic;
+  }
+  .story-image {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+  }
+  .story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .section-values {
+    background: linear-gradient(180deg, var(--color-paper-alt), var(--color-paper));
+  }
+  .values-head {
+    text-align: center;
+    max-width: 50rem;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+  }
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 800px) {
+    .values-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .value-card {
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 1rem;
+    padding: 2.25rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .value-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(27, 58, 95, 0.08);
+  }
+  .value-card h3 {
+    font-size: 1.4rem;
+    margin: 1.1rem 0 0.6rem;
+  }
+  .value-card p {
+    color: var(--color-ink-soft);
+    line-height: 1.65;
+  }
+
+  .section-team {
+    background: var(--color-paper);
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  @media (min-width: 1000px) {
+    .team-grid {
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+    }
+  }
+  .team-image {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+  }
+  .team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .team-text em {
+    color: var(--color-gold);
+    font-style: italic;
+  }
+
+  .team-stats {
+    list-style: none;
+    padding: 0;
+    margin: 1.75rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @media (min-width: 600px) {
+    .team-stats {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .team-stats li {
+    background: var(--color-paper-alt);
+    border-radius: 0.85rem;
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-navy);
+    line-height: 1;
+  }
+  .stat-num span {
+    color: var(--color-gold);
+    font-size: 1.5rem;
+    margin-left: 0.15rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.3rem;
+  }
+
+  .section-area {
+    background: var(--color-paper-alt);
+  }
+  .area-card {
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+    padding: 3rem;
+    box-shadow: var(--shadow-card);
+  }
+  .area-card .lead {
+    margin-bottom: 1.75rem;
+  }
+  .area-meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-line);
+  }
+  @media (min-width: 700px) {
+    .area-meta {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .area-meta strong {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+  }
+  .area-meta span {
+    color: var(--color-ink);
+    line-height: 1.5;
+  }
+</style>
