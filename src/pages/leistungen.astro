@@ -46,7 +46,7 @@ const heroImg =
                 <p>{s.description}</p>
               </div>
               <div class="service-row-cta">
-                <a href={site.phone.href} class="btn btn-ghost">
+                <a href={site.phone.href} class="btn btn-accent">
                   <Icon name="phone" size={16} />
                   Termin
                 </a>
@@ -56,7 +56,7 @@ const heroImg =
         }
       </div>
 
-      <div class="leistungen-cta reveal">
+      <div class="leistungen-cta surface-light reveal">
         <h2 class="h-section">Ihre Leistung nicht dabei?</h2>
         <p class="lead" style="margin-inline:auto">
           Wir können mehr, als hier steht - rufen Sie uns einfach an. Eine ehrliche
@@ -86,7 +86,7 @@ const heroImg =
     grid-template-columns: 1fr;
     gap: 1rem;
     align-items: start;
-    background: #fff;
+    background: var(--color-card);
     border: 1px solid var(--color-line);
     border-radius: 1rem;
     padding: 1.5rem;
@@ -95,8 +95,8 @@ const heroImg =
     scroll-margin-top: 6rem;
   }
   .service-row:hover {
-    border-color: var(--color-navy);
-    box-shadow: 0 8px 24px rgba(27, 58, 95, 0.08);
+    border-color: var(--color-yellow);
+    box-shadow: 0 8px 24px rgba(254, 196, 32, 0.12);
   }
   @media (min-width: 800px) {
     .service-row {
@@ -107,17 +107,26 @@ const heroImg =
     }
   }
   .service-row.alt {
-    background: var(--color-paper-alt);
+    background: var(--color-light);
+    border-color: var(--color-light-line);
+    color: var(--color-ink);
+  }
+  .service-row.alt .service-row-text h2 { color: var(--color-ink); }
+  .service-row.alt .service-row-text p:last-child { color: var(--color-ink-soft); }
+  .service-row.alt .icon-circle {
+    background: var(--color-ink);
+    color: var(--color-yellow);
+    border-color: var(--color-ink);
   }
 
   .service-row-text h2 {
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
-    color: var(--color-navy);
+    color: #fff;
   }
   .service-short {
     display: inline-block;
-    color: var(--color-black);
+    color: #1A1A1A;
     background: var(--color-yellow);
     padding: 0.2rem 0.6rem;
     border-radius: 0.3rem;
@@ -126,7 +135,7 @@ const heroImg =
     margin-bottom: 0.7rem;
   }
   .service-row-text p:last-child {
-    color: var(--color-ink-soft);
+    color: var(--color-text-soft);
     line-height: 1.6;
   }
 
@@ -142,11 +151,14 @@ const heroImg =
   .leistungen-cta {
     margin-top: 5rem;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, var(--color-paper-alt), var(--color-paper));
-    border: 1px solid var(--color-line);
+    background: var(--color-light);
+    border: 1px solid var(--color-light-line);
     border-radius: 1.25rem;
     text-align: center;
+    color: var(--color-ink);
   }
+  .leistungen-cta .h-section { color: var(--color-ink); }
+  .leistungen-cta .lead { color: var(--color-ink-soft); }
   .leistungen-cta .h-section {
     margin-bottom: 1rem;
   }

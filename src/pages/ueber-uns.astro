@@ -59,7 +59,7 @@ const detailImg =
     </div>
   </section>
 
-  <section class="section section-values">
+  <section class="section section-values surface-light">
     <div class="container-x">
       <div class="values-head reveal">
         <span class="eyebrow">Wofür wir stehen</span>
@@ -144,7 +144,7 @@ const detailImg =
     </div>
   </section>
 
-  <section class="section section-area">
+  <section class="section section-area surface-light">
     <div class="container-x">
       <div class="area-card reveal">
         <span class="eyebrow">Standort Dortmund-Derne</span>
@@ -187,15 +187,15 @@ const detailImg =
     }
   }
   .story-text p {
-    color: var(--color-ink-soft);
+    color: var(--color-text-soft);
     line-height: 1.7;
     margin-bottom: 1rem;
     max-width: 60ch;
   }
   .story-text em {
-    color: var(--color-black);
+    color: #1A1A1A;
     font-style: italic;
-    background: rgba(254, 196, 32, 0.25);
+    background: var(--color-yellow);
     padding: 0 0.25rem;
     border-radius: 0.2rem;
   }
@@ -212,7 +212,7 @@ const detailImg =
   }
 
   .section-values {
-    background: linear-gradient(180deg, var(--color-paper-alt), var(--color-paper));
+    background: var(--color-light);
   }
   .values-head {
     text-align: center;
@@ -232,7 +232,7 @@ const detailImg =
   }
   .value-card {
     background: #fff;
-    border: 1px solid var(--color-line);
+    border: 1px solid var(--color-light-line);
     border-radius: 1rem;
     padding: 1.75rem;
     box-shadow: var(--shadow-soft);
@@ -243,11 +243,12 @@ const detailImg =
   }
   .value-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(27, 58, 95, 0.08);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
   }
   .value-card h3 {
     font-size: 1.4rem;
     margin: 1.1rem 0 0.6rem;
+    color: var(--color-ink);
   }
   .value-card p {
     color: var(--color-ink-soft);
@@ -255,7 +256,7 @@ const detailImg =
   }
 
   .section-team {
-    background: var(--color-paper);
+    background: var(--color-bg);
   }
   .team-grid {
     display: grid;
@@ -281,9 +282,9 @@ const detailImg =
     display: block;
   }
   .team-text em {
-    color: var(--color-black);
+    color: #1A1A1A;
     font-style: italic;
-    background: rgba(254, 196, 32, 0.25);
+    background: var(--color-yellow);
     padding: 0 0.25rem;
     border-radius: 0.2rem;
   }
@@ -302,7 +303,8 @@ const detailImg =
     }
   }
   .team-stats li {
-    background: var(--color-paper-alt);
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
     border-radius: 0.85rem;
     padding: 1.25rem 1rem;
     text-align: center;
@@ -310,45 +312,51 @@ const detailImg =
   .stat-num {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--color-navy);
+    color: var(--color-yellow);
     line-height: 1;
   }
   .stat-num span {
-    color: #F5A623;
+    color: var(--color-yellow);
     font-size: 1.5rem;
     margin-left: 0.15rem;
   }
   .stat-label {
     font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--color-ink-soft);
+    font-weight: 700;
+    color: var(--color-text-soft);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-top: 0.3rem;
   }
 
   .section-area {
-    background: var(--color-paper-alt);
+    background: var(--color-light);
   }
   .area-card {
     background: #fff;
-    border: 1px solid var(--color-line);
+    border: 1px solid var(--color-light-line);
     border-radius: 1.25rem;
     padding: 1.75rem;
     box-shadow: var(--shadow-card);
+    color: var(--color-ink);
   }
   @media (min-width: 700px) {
     .area-card { padding: 3rem; }
   }
+  .area-card .h-section { color: var(--color-ink); }
   .area-card .lead {
     margin-bottom: 1.75rem;
+    color: var(--color-ink-soft);
+  }
+  .area-card .eyebrow {
+    color: var(--color-ink);
   }
   .area-meta {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid var(--color-line);
+    border-top: 1px solid var(--color-light-line);
   }
   @media (min-width: 700px) {
     .area-meta {
@@ -359,7 +367,7 @@ const detailImg =
     display: block;
     font-size: 0.78rem;
     font-weight: 800;
-    color: var(--color-black);
+    color: var(--color-ink);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 0.3rem;
@@ -367,7 +375,7 @@ const detailImg =
     padding-left: 0.5rem;
   }
   .area-meta span {
-    color: var(--color-ink);
+    color: var(--color-ink-soft);
     line-height: 1.5;
   }
 </style>

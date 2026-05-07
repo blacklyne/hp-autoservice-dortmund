@@ -10,9 +10,9 @@ const year = new Date().getFullYear();
     <div class="footer-grid">
       <div class="footer-col">
         <div class="footer-brand">
-          <span class="footer-mark">H.P.</span>
+          <img src="/logo.png" alt={site.name} class="footer-logo" width="64" height="58" />
           <div>
-            <div class="footer-name">Autoservice</div>
+            <div class="footer-name">H.P. Autoservice</div>
             <div class="footer-sub">Kfz-Meisterbetrieb Dortmund-Derne</div>
           </div>
         </div>
@@ -118,18 +118,13 @@ const year = new Date().getFullYear();
     gap: 0.7rem;
     margin-bottom: 1rem;
   }
-  .footer-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 0.55rem;
-    background: var(--color-yellow);
-    color: var(--color-black);
-    font-weight: 800;
-    font-size: 0.85rem;
+  .footer-logo {
+    display: block;
+    width: auto;
+    height: 3.25rem;
+    object-fit: contain;
     flex-shrink: 0;
+    mix-blend-mode: lighten;
   }
   .footer-name {
     font-weight: 800;

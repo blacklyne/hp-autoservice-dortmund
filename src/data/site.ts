@@ -9,10 +9,6 @@ export const site = {
     international: "+49 231 810717",
     href: "tel:+4923810717",
   },
-  whatsapp: {
-    display: "0231 810717",
-    href: "https://wa.me/4923810717",
-  },
   address: {
     street: "Nikolaus-Groß-Straße 21",
     zip: "44329",
@@ -58,83 +54,83 @@ export const nav = [
 
 export const services = [
   {
-    slug: "hu-au",
-    title: "HU & AU",
-    short: "Hauptuntersuchung und Abgasuntersuchung",
-    description:
-      "Hauptuntersuchung und Abgasuntersuchung in Kooperation mit TÜV und DEKRA - direkt bei uns in der Werkstatt. Wir bereiten Ihr Fahrzeug auf die Prüfung vor und beheben Mängel sofort.",
-    icon: "shield-check",
-  },
-  {
-    slug: "inspektion",
-    title: "Inspektion",
-    short: "Nach Herstellervorgaben - alle Marken",
-    description:
-      "Inspektion nach Herstellervorgaben mit Original- oder gleichwertigen Ersatzteilen. Garantieerhalt bei Neufahrzeugen, lückenloses Scheckheft und ehrliche Beratung inklusive.",
-    icon: "clipboard",
-  },
-  {
-    slug: "bremsen",
-    title: "Bremsen-Service",
-    short: "Beläge, Scheiben, Bremsflüssigkeit",
-    description:
-      "Bremsbeläge und Bremsscheiben prüfen und wechseln, Bremsflüssigkeit erneuern, Bremsanlage komplett warten. Sicherheit ist nicht verhandelbar - wir arbeiten mit Markenteilen.",
-    icon: "brake",
-  },
-  {
-    slug: "reifen",
-    title: "Reifen & Einlagerung",
-    short: "Wechsel, Auswuchten, Einlagerung",
-    description:
-      "Reifenwechsel mit Auswuchten, Reifenmontage, RDKS-Service und sichere Einlagerung Ihrer Saisonreifen in unserem Reifenhotel - sauber, trocken und versichert.",
-    icon: "tire",
-  },
-  {
-    slug: "klima",
-    title: "Klimaanlagen-Service",
-    short: "Wartung, Desinfektion, Lecksuche",
-    description:
-      "Klimaanlage warten, Kältemittel auffüllen (R134a und R1234yf), Filter wechseln und Verdampfer desinfizieren. Damit Sie auch im Sommer entspannt unterwegs sind.",
-    icon: "snowflake",
-  },
-  {
-    slug: "diagnose",
-    title: "Diagnose & Elektrik",
+    slug: "motordiagnose",
+    title: "Motordiagnose",
     short: "Fehler auslesen, Elektronik prüfen",
     description:
       "Moderne Fahrzeuge sind Computer auf Rädern. Wir lesen Fehlerspeicher aus, finden Ursachen für Warnleuchten und reparieren Elektrik und Elektronik herstellerübergreifend.",
     icon: "diagnose",
   },
   {
-    slug: "oelwechsel",
-    title: "Ölwechsel",
-    short: "Motoröl und Filter nach Vorgabe",
+    slug: "verschleissreparaturen",
+    title: "Verschleißreparaturen",
+    short: "Bremsen, Stoßdämpfer, Kupplung",
     description:
-      "Motorölwechsel inklusive Ölfilter, exakt nach Herstellervorgabe und Viskosität. Wir prüfen dabei kostenlos die wichtigsten Verschleißpunkte mit.",
-    icon: "oil",
-  },
-  {
-    slug: "achsvermessung",
-    title: "Achsvermessung",
-    short: "Spur und Sturz exakt einstellen",
-    description:
-      "Computergestützte 3D-Achsvermessung. Falsche Spureinstellung kostet Reifen, Sprit und Fahrkomfort - wir stellen alle Werte exakt nach Herstellerangabe ein.",
-    icon: "axle",
-  },
-  {
-    slug: "reparaturen",
-    title: "Reparaturen aller Marken",
-    short: "Motor, Getriebe, Kupplung, Auspuff",
-    description:
-      "Wir reparieren alle gängigen Marken - vom kleinen Defekt bis zur großen Reparatur. Motor, Getriebe, Kupplung, Auspuff, Fahrwerk: ehrliche Diagnose, fairer Preis.",
+      "Bremsbeläge, Bremsscheiben, Stoßdämpfer, Kupplung, Auspuff - alle typischen Verschleißteile prüfen und tauschen wir mit Markenqualität. Sicherheit ohne Kompromisse.",
     icon: "wrench",
   },
   {
-    slug: "unfall",
-    title: "Unfallinstandsetzung",
-    short: "Karosserie, Lack, Versicherung",
+    slug: "wartung",
+    title: "Wartungsarbeiten",
+    short: "Regelmäßig, sauber, transparent",
     description:
-      "Nach dem Unfall stehen wir Ihnen zur Seite: Karosseriearbeiten, Lackierung und komplette Abwicklung mit Ihrer Versicherung - inklusive Gutachten und Ersatzwagen-Vermittlung.",
-    icon: "car-crash",
+      "Routinewartung nach Herstellervorgaben - vom Filter über Zündkerzen bis zur Bremsflüssigkeit. Kleine Eingriffe, die teure Folgereparaturen verhindern.",
+    icon: "clipboard",
+  },
+  {
+    slug: "hu-au",
+    title: "Haupt- u. Abgasuntersuchung",
+    short: "TÜV direkt bei uns in der Werkstatt",
+    description:
+      "Hauptuntersuchung und Abgasuntersuchung nehmen wir in Kooperation mit dem TÜV direkt bei uns in der Werkstatt ab. Wir bereiten Ihr Fahrzeug auf die Prüfung vor und beheben Mängel sofort.",
+    icon: "shield-check",
+  },
+  {
+    slug: "oelwechsel-inspektion",
+    title: "Ölwechsel u. Inspektion",
+    short: "Nach Herstellervorgaben - alle Marken",
+    description:
+      "Motorölwechsel inklusive Filter, exakt nach Herstellervorgabe und Viskosität. Inspektion mit Scheckheft-Eintrag und kostenlosem Zusatzcheck der wichtigsten Verschleißpunkte.",
+    icon: "oil",
+  },
+  {
+    slug: "klima-glas-reifen",
+    title: "Klima-, Glas-, Reifenservice",
+    short: "Klimaservice, Steinschlag, Reifenwechsel",
+    description:
+      "Klimaanlage warten und desinfizieren, Steinschlag-Reparatur und Frontscheibenwechsel, Reifenwechsel mit Auswuchten, RDKS-Service und sichere Saisoneinlagerung in unserem Reifenhotel.",
+    icon: "snowflake",
+  },
+  {
+    slug: "instandhaltung",
+    title: "Instandhaltungstechnik",
+    short: "Vorbeugen statt reparieren",
+    description:
+      "Vorbeugende Instandhaltung verlängert die Lebensdauer Ihres Fahrzeugs spürbar. Wir prüfen kritische Komponenten regelmäßig und greifen ein, bevor aus einem Hinweis ein Schaden wird.",
+    icon: "settings",
+  },
+  {
+    slug: "cabriolet-verdeck",
+    title: "Cabriolet-Verdeckwechsel",
+    short: "Verdeck, Mechanik, Hydraulik",
+    description:
+      "Wir tauschen abgenutzte Cabrio-Verdecke und reparieren Verdeckmechanik und Hydraulik - damit Ihr Cabrio auch nach vielen Jahren wieder dicht und leise schließt.",
+    icon: "car",
+  },
+  {
+    slug: "karosserie-tuning",
+    title: "Karosserie-Tuning",
+    short: "Bodywork, Lackierung, Individualisierung",
+    description:
+      "Vom dezenten Body-Kit bis zur kompletten Karosserie-Individualisierung. Wir arbeiten sauber, planen mit Ihnen jedes Detail und liefern serienreife Qualität ab.",
+    icon: "spray",
+  },
+  {
+    slug: "oldtimer",
+    title: "Oldtimer-Restauration",
+    short: "Klassiker pflegen und erhalten",
+    description:
+      "Oldtimer brauchen Erfahrung statt Diagnose-Tablet. Wir restaurieren Klassiker mit dem Respekt vor der Substanz - Technik, Karosserie und Lack aus einer Hand.",
+    icon: "sparkle",
   },
 ];
