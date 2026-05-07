@@ -218,8 +218,8 @@ const heroImg =
     box-shadow: 0 8px 20px rgba(27, 58, 95, 0.07);
   }
   .contact-card.highlight {
-    background: linear-gradient(135deg, rgba(200, 48, 44, 0.06), rgba(200, 48, 44, 0.02));
-    border-color: rgba(200, 48, 44, 0.25);
+    background: linear-gradient(135deg, rgba(254, 196, 32, 0.18), rgba(254, 196, 32, 0.06));
+    border-color: var(--color-yellow);
   }
   .contact-label {
     font-size: 0.78rem;
@@ -317,8 +317,11 @@ const heroImg =
     accent-color: var(--color-navy);
   }
   .checkbox a {
-    color: var(--color-accent);
+    color: var(--color-black);
     text-decoration: underline;
+    text-decoration-color: var(--color-yellow);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
   }
 
   .submit-btn {
@@ -333,9 +336,10 @@ const heroImg =
     text-align: center;
   }
   .form-note a {
-    color: var(--color-accent);
-    font-weight: 600;
+    color: var(--color-black);
+    font-weight: 700;
     margin-left: 0.3rem;
+    border-bottom: 2px solid var(--color-yellow);
   }
 
   .map-section {
@@ -363,7 +367,7 @@ const heroImg =
     font-size: 0.92rem;
   }
   .map-hint :global(svg) {
-    color: var(--color-accent);
+    color: var(--color-black);
   }
   .map-link {
     margin-left: auto;
