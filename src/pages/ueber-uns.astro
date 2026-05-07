@@ -14,11 +14,11 @@ const breadcrumbs = breadcrumbSchema([
 ]);
 
 const heroImg =
-  "https://images.unsplash.com/photo-1632823471565-1ec5e8a31bf1?auto=format&fit=crop&w=2000&q=80";
+  "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=2000&q=80";
 const workshopImg =
-  "https://images.unsplash.com/photo-1581610186659-2cef6daca0e8?auto=format&fit=crop&w=1400&q=80";
+  "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=80";
 const detailImg =
-  "https://images.unsplash.com/photo-1599256871679-c97e6c8c6c1e?auto=format&fit=crop&w=1200&q=80";
+  "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80";
 ---
 
 <Base title="Über uns" description={description} jsonLd={breadcrumbs}>
@@ -231,9 +231,12 @@ const detailImg =
     background: #fff;
     border: 1px solid var(--color-line);
     border-radius: 1rem;
-    padding: 2.25rem;
+    padding: 1.75rem;
     box-shadow: var(--shadow-soft);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  @media (min-width: 700px) {
+    .value-card { padding: 2.25rem; }
   }
   .value-card:hover {
     transform: translateY(-3px);
@@ -325,8 +328,11 @@ const detailImg =
     background: #fff;
     border: 1px solid var(--color-line);
     border-radius: 1.25rem;
-    padding: 3rem;
+    padding: 1.75rem;
     box-shadow: var(--shadow-card);
+  }
+  @media (min-width: 700px) {
+    .area-card { padding: 3rem; }
   }
   .area-card .lead {
     margin-bottom: 1.75rem;

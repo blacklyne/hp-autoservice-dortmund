@@ -14,7 +14,7 @@ const breadcrumbs = breadcrumbSchema([
 ]);
 
 const heroImg =
-  "https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?auto=format&fit=crop&w=2000&q=80";
+  "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=2000&q=80";
 ---
 
 <Base title="Kontakt" description={description} jsonLd={breadcrumbs}>
@@ -245,8 +245,11 @@ const heroImg =
     background: #fff;
     border: 1px solid var(--color-line);
     border-radius: 1.25rem;
-    padding: 2.5rem;
+    padding: 1.5rem;
     box-shadow: var(--shadow-card);
+  }
+  @media (min-width: 600px) {
+    .form-card { padding: 2.5rem; }
   }
   .form-card .lead {
     margin-bottom: 1.75rem;
