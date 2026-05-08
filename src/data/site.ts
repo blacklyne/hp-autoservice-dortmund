@@ -3,11 +3,11 @@ export const site = {
   fullName: "H.P. Autoservice - Kfz-Meisterbetrieb Dortmund-Derne",
   tagline: "Ihr Kfz-Meisterbetrieb in Dortmund-Derne",
   url: "https://hp-autoservice-dortmund.de",
-  email: "info@hp-autoservice-dortmund.de",
+  email: "Hp-autoservice@web.de",
   phone: {
     display: "0231 810717",
     international: "+49 231 810717",
-    href: "tel:+4923810717",
+    href: "tel:+49231810717",
   },
   address: {
     street: "Nikolaus-Groß-Straße 21",
@@ -39,8 +39,11 @@ export const site = {
     { day: "Sonntag", open: null, close: null },
   ],
   team: {
-    masters: 2,
-    employees: 2,
+    workshop: 3,
+    office: 1,
+  },
+  owner: {
+    name: "Adrian Pollok",
   },
   formspreeId: "REPLACE_FORMSPREE_ID",
 };
@@ -110,19 +113,11 @@ export const services = [
     icon: "settings",
   },
   {
-    slug: "cabriolet-verdeck",
-    title: "Cabriolet-Verdeckwechsel",
-    short: "Verdeck, Mechanik, Hydraulik",
-    description:
-      "Wir tauschen abgenutzte Cabrio-Verdecke und reparieren Verdeckmechanik und Hydraulik - damit Ihr Cabrio auch nach vielen Jahren wieder dicht und leise schließt.",
-    icon: "car",
-  },
-  {
     slug: "karosserie-tuning",
     title: "Karosserie-Tuning",
-    short: "Bodywork, Lackierung, Individualisierung",
+    short: "Body-Kits, Spoiler, Individualisierung",
     description:
-      "Vom dezenten Body-Kit bis zur kompletten Karosserie-Individualisierung. Wir arbeiten sauber, planen mit Ihnen jedes Detail und liefern serienreife Qualität ab.",
+      "Vom dezenten Body-Kit bis zur kompletten Karosserie-Individualisierung. Wir arbeiten sauber, planen mit Ihnen jedes Detail und liefern serienreife Qualität ab. Lackierarbeiten geben wir an unseren Lack-Partnerbetrieb weiter.",
     icon: "spray",
   },
   {

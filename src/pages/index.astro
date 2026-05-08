@@ -2,6 +2,7 @@
 import Base from "~/layouts/Base.astro";
 import Icon from "~/components/Icon.astro";
 import SectionHeader from "~/components/SectionHeader.astro";
+import RecruitingBanner from "~/components/RecruitingBanner.astro";
 import { site, services } from "~/data/site";
 import { autoRepairSchema, websiteSchema } from "~/lib/seo";
 
@@ -43,8 +44,8 @@ const trustPoints = [
             Ihre Werkstatt im<br />Herzen von Derne.
           </h1>
           <p class="hero-lead text-shadow-soft">
-            Ehrliche Beratung, faire Preise, saubere Arbeit. Zwei Meister, ein eingespieltes Team -
-            und das Vertrauen unserer Nachbarn aus Dortmund seit vielen Jahren.
+            Ehrliche Beratung, faire Preise, saubere Arbeit. Adrian Pollok und sein Team
+            betreuen die Autos der Nachbarschaft in Dortmund-Derne seit vielen Jahren.
           </p>
 
           <ul class="trust-checks">
@@ -135,13 +136,15 @@ const trustPoints = [
             <Icon name="award" size={20} />
             <div>
               <div class="info-label">Qualifikation</div>
-              <div class="info-value">2 Meister · 2 Mitarbeiter</div>
+              <div class="info-value">3 Werkstatt · 1 Büro</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <RecruitingBanner />
 
   <section class="section">
     <div class="container-x">
@@ -196,7 +199,7 @@ const trustPoints = [
               </span>
               <div>
                 <h4>Meisterbetrieb</h4>
-                <p>Eingetragen bei der HWK Dortmund. Zwei Kfz-Meister, vier Hände am Schraubenschlüssel.</p>
+                <p>Eingetragen bei der HWK Dortmund. Inhaber Adrian Pollok mit drei Mechanikern in der Werkstatt.</p>
               </div>
             </li>
             <li>
@@ -214,7 +217,7 @@ const trustPoints = [
               </span>
               <div>
                 <h4>Persönlich erreichbar</h4>
-                <p>Sie sprechen direkt mit dem Meister oder unserem Büro - nicht mit einem Callcenter.</p>
+                <p>Sie sprechen direkt mit Adrian oder unserem Büro - nicht mit einem Callcenter.</p>
               </div>
             </li>
             <li>
